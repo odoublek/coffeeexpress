@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { overflow-x: hidden; }
+}
+
+@layer components {
+      .grain {
+    position: relative;
+  }
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.06;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2
+    bg-white text-brand
+    font-sans text-[12px] tracking-[2.5px] uppercase font-semibold
+    px-10 py-4 transition;
+  }
+  .btn-primary:hover {
+    @apply -translate-y-0.5 shadow-lg;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center
+    bg-transparent text-white
+    font-sans text-[12px] tracking-[2.5px] uppercase font-medium
+    px-10 py-[15px]
+    border border-white/50 transition;
+  }
+
+  .section-label {
+    @apply font-sans text-[11px] tracking-[4px] uppercase text-brand;
+  }
+}
