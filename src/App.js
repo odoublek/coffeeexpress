@@ -4,10 +4,9 @@ import aboutVideo from "./assets/aboutuscoffee.mp4";
 import expressVideo from "./assets/expressreklam.mp4";
 import expresslogo from "./assets/logo.png";
 import corner1 from "./assets/corner1.png";
-import corner2 from "./assets/corner2.png";
-import corner3 from "./assets/corner3.png";
-import corner4 from "./assets/corner.png";
-import corner5 from "./assets/corner.png";
+import corner2 from "./assets/corner2.jpeg";
+import corner3 from "./assets/corner3.jpeg";
+import corner4 from "./assets/corner4.png";
 import espressoImg from "./assets/espresso.png";
 import americanoImg from "./assets/americano.png";
 import cappucinoImg from "./assets/cappucino.png";
@@ -35,7 +34,7 @@ const NAV_LINKS = [
 ];
 
 // Sabit array - useMemo gereksiz, component dışında tanımlanabilir
-const CORNER_GALLERY = [corner1, corner2, corner3, corner4, corner5];
+const CORNER_GALLERY = [corner1, corner2, corner3, corner4];
 
 const MENU_ITEMS = [
   {
@@ -79,54 +78,62 @@ const MENU_ITEMS = [
 const BRANCHES = [
   {
     city: "Bolu",
-    name: "İstanbul Yönü Shell Coffee Express",
-    address: "Bolu • İstanbul Yönü • Shell",
-    phone: "+90 000 000 00 00",
-    hours: "07:00 - 22:00",
+    name: "Dörtdivan İstanbul Yönü Shell Coffee Express",
     mapUrl: "https://maps.app.goo.gl/iTbyZT9Z7PowRRaQ6",
   },
-  {
+    {
     city: "Bolu",
-    name: "Ankara Yönü Shell Coffee Express",
-    address: "Bolu • Ankara Yönü • Shell",
-    phone: "+90 000 000 00 00",
-    hours: "07:00 - 22:00",
+    name: "Dörtdivan Ankara Yönü Shell Coffee Express",
     mapUrl: "https://maps.app.goo.gl/DWC1q8WFx1iUTZBz5",
   },
-  {
+    {
+    city: "Bolu",
+    name: "Dörtdivan İstanbul Yönü Köfteexpress",
+    mapUrl: "https://maps.app.goo.gl/eHzSTFxhcBiTAKrQ9",
+  },
+      {
+    city: "Bolu",
+    name: "Dörtdivan Ankara Yönü Köfteexpress",
+    mapUrl: "https://maps.app.goo.gl/qYHPoTzkczqEBenz8",
+  },
+    {
+    city: "Mersin",
+    name: "Bumer Dinlenme Tesisleri Coffee Express",
+    mapUrl: "https://maps.app.goo.gl/jeqPonhbEH2nmBGk9",
+  },
+    {
     city: "Kırklareli",
     name: "Babaeski İstanbul Yönü Coffee Express",
-    address: "Kırklareli • Babaeski • İstanbul Yönü",
-    phone: "+90 000 000 00 00",
-    hours: "07:00 - 22:00",
-    mapUrl: "https://maps.app.goo.gl/ibAJFCAzMDiUnvE9A",
+    mapUrl: "https://maps.app.goo.gl/Nfz6VwQfUR2m6b8b8",
   },
   {
     city: "Kırklareli",
     name: "Babaeski Edirne Yönü Coffee Express",
-    address: "Kırklareli • Babaeski • Edirne Yönü",
-    phone: "+90 000 000 00 00",
-    hours: "07:00 - 22:00",
-    mapUrl: "https://maps.app.goo.gl/rhuaWELNnQ2ccXqL9",
+    mapUrl: "https://maps.app.goo.gl/YrPdXaZtKHkUSbLZ6",
   },
   {
     city: "İstanbul",
     name: "Samandıra Coffee Express",
-    address: "İstanbul • Samandıra",
-    phone: "+90 000 000 00 00",
-    hours: "07:00 - 23:00",
-    mapUrl: "https://maps.app.goo.gl/TKdwfJdzbLKbQNn27",
+    mapUrl: "https://maps.app.goo.gl/VEmbcK9Rp8PK5QJQA",
+  },
+    {
+    city: "İstanbul",
+    name: "Dudullu Coffee Express",
+    mapUrl: "https://maps.app.goo.gl/DB4yQGY39AetYeD18",
   },
 ];
 
 const COFFEE_CORNERS = [
-  { name: "Bolu Shell Coffee Corner", city: "Bolu", address: "İstanbul Yönü • Shell", mapUrl: "https://maps.google.com/?q=Bolu+Shell+Coffee+Corner" },
-  { name: "Ankara Yönü Coffee Corner", city: "Bolu", address: "Ankara Yönü • Shell", mapUrl: "https://maps.google.com/?q=Ankara+Yönü+Coffee+Corner+Bolu" },
-  { name: "Babaeski Coffee Corner", city: "Kırklareli", address: "Babaeski • İstanbul Yönü", mapUrl: "https://maps.google.com/?q=Babaeski+Coffee+Corner" },
-  { name: "Samandıra Coffee Corner", city: "İstanbul", address: "Samandıra", mapUrl: "https://maps.google.com/?q=Samandıra+Coffee+Corner" },
-  { name: "Coffee Corner 5", city: "Bolu", address: "Lokasyon detayı", mapUrl: "https://maps.google.com/?q=Coffee+Corner+5" },
-  { name: "Coffee Corner 6", city: "İstanbul", address: "Lokasyon detayı", mapUrl: "https://maps.google.com/?q=Coffee+Corner+6" },
-  { name: "Coffee Corner 7", city: "Kırklareli", address: "Lokasyon detayı", mapUrl: "https://maps.google.com/?q=Coffee+Corner+7" },
+  { name: "Sabahattinin yeri", city: "Bolu", address: "Kaynaşlı", mapUrl: "https://maps.app.goo.gl/c6F5o7Lf9P2V2Mo17" },
+  { name: "Metro Dinlenme Tesisi", city: "İstanbul", address: "Dudullu", mapUrl: "https://maps.app.goo.gl/DB4yQGY39AetYeD18" },
+  { name: "Metro Holding", city: "İstanbul", address: "Beykoz", mapUrl: "https://maps.app.goo.gl/pRzd9A17pHKg4KNN8" },
+  { name: "Metro Dinlenme Tesisi", city: "İstanbul", address: "Samandıra", mapUrl: "https://maps.app.goo.gl/VEmbcK9Rp8PK5QJQA" },
+  { name: "Ulviye Gıda", city: "Kocaeli", address: "İzmit", mapUrl: "https://maps.app.goo.gl/ndh1XYPnzV33VWQq5" },
+  { name: "Efe Park Dinlenme Tesisi", city: "Balıkesir", address: "Susurluk", mapUrl: "https://maps.app.goo.gl/hGahMWnFMV8BiHpR7" },
+  { name: "İstanbul Shell", city: "Tekirdağ", address: "Çerkezköy", mapUrl: "https://maps.app.goo.gl/hA4wsDCsPZgESUgP9" },
+  { name: "Edirne Yönü Shell", city: "Tekirdağ", address: "Çerkezköy", mapUrl: "https://maps.app.goo.gl/iwNwRSbCjEkhMGCp6" },
+  { name: "İstanbul Yönü Metropark Dinlenme Tesisleri", city: "Kırklareli", address: "Babaeski", mapUrl: "https://maps.app.goo.gl/Nfz6VwQfUR2m6b8b8" },
+  { name: "Edirne Yönü Metropark Dinlenme Tesisleri", city: "Kırklareli", address: "Babaeski", mapUrl: "https://maps.app.goo.gl/YrPdXaZtKHkUSbLZ6" },
 ];
 
 const WHATSAPP_NUMBER = "905001234567";
@@ -181,7 +188,7 @@ export default function App() {
       const form = e.currentTarget;
       const formData = new FormData(form);
 
-      const res = await fetch("https://formsubmit.co/ajax/mugiwaraozgur@gmail.com", {
+      const res = await fetch("https://formsubmit.co/ajax/coffeeexpressiletisim@gmail.com", {
         method: "POST",
         headers: { Accept: "application/json" },
         body: formData,
@@ -309,7 +316,9 @@ export default function App() {
               <p
                 className={`font-sans text-white/70 text-[16px] sm:text-[17px] leading-[1.9] mt-6 max-w-[520px] transition-all duration-700 delay-150 ${heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
               >
-                Coffee Express, yol üzerindeki en kaliteli kahve deneyimini sunmak için kuruldu. İster şehir içinde ister uzun bir yolculukta olun, her durakta aynı lezzeti ve kaliteyi bulursunuz.
+               Yol bazen bir kaçış, bazen bir başlangıçtır.
+Coffee Express, bu anlara eşlik eden en kaliteli kahve deneyimini sunmak için kuruldu.
+Şehir içinde ya da uzun bir yolculukta, her durakta aynı sıcaklığı ve aynı lezzeti bulursunuz.
               </p>
 
               <div
@@ -325,9 +334,9 @@ export default function App() {
 
               <div className="mt-12 grid max-w-[560px] grid-cols-2 gap-8 border-t border-white/10 pt-8 sm:grid-cols-4">
                 {[
-                  ["5", "Şube"],
-                  ["50+", "Seçkin Lezzet"],
-                  ["2021", "Kuruluş"],
+                  ["9", "Şube"],
+                  ["7/24", " Hizmet"],
+                  ["2023", "Kuruluş"],
                   ["100K+", "Mutlu Müşteri"],
                 ].map(([num, label]) => (
                   <div key={label}>
@@ -383,9 +392,9 @@ export default function App() {
               <div className="h-[2px] w-14 bg-brand mb-8" />
 
               <p className="font-sans text-brand/75 leading-[1.9] text-[15px] mb-5 font-light">
-   Coffee Express, özenle seçilen kahve çekirdeklerini dünyanın dört bir yanından 
-  getirerek her noktada aynı kaliteyi sunar. Uzman baristalarımız her fincanı 
-  aynı özenle hazırlar — fark yaratan tek şey durağınız, kahvenin kalitesi değil.
+                Coffee Express, özenle seçilen kahve çekirdeklerini dünyanın dört bir yanından
+                getirerek her noktada aynı kaliteyi sunar. Uzman baristalarımız her fincanı
+                aynı özenle hazırlar — fark yaratan tek şey durağınız, kahvenin kalitesi değil.
               </p>
 
               <button
@@ -411,22 +420,22 @@ export default function App() {
                 />
               </div>
 
-<div className="absolute -bottom-8 left-0 w-full px-3">
-  <div className="flex justify-between gap-2">
-    <div className="flex-1 rounded-2xl bg-brand px-3 py-3 text-center shadow-[0_15px_40px_rgba(34,66,81,0.35)] border border-white/10">
-      <div className="text-white font-light text-[13px] sm:text-[16px]">Kalite</div>
-      <div className="mt-1 font-sans text-[8px] sm:text-[10px] uppercase tracking-[0.2em] text-white/70">Çekirdeğinden</div>
-    </div>
-    <div className="flex-1 rounded-2xl bg-brand px-3 py-3 text-center shadow-[0_15px_40px_rgba(34,66,81,0.35)] border border-white/10">
-      <div className="text-white font-light text-[13px] sm:text-[16px]">Ustalık</div>
-      <div className="mt-1 font-sans text-[8px] sm:text-[10px] uppercase tracking-[0.2em] text-white/70">Baristandan</div>
-    </div>
-    <div className="flex-1 rounded-2xl bg-brand px-3 py-3 text-center shadow-[0_15px_40px_rgba(34,66,81,0.35)] border border-white/10">
-      <div className="text-white font-light text-[13px] sm:text-[16px]">Lezzet</div>
-      <div className="mt-1 font-sans text-[8px] sm:text-[10px] uppercase tracking-[0.2em] text-white/70">Bardağına</div>
-    </div>
-  </div>
-</div>
+              <div className="absolute -bottom-8 left-0 w-full px-3">
+                <div className="flex justify-between gap-2">
+                  <div className="flex-1 rounded-2xl bg-brand px-3 py-3 text-center shadow-[0_15px_40px_rgba(34,66,81,0.35)] border border-white/10">
+                    <div className="text-white font-light text-[13px] sm:text-[16px]">Kalite</div>
+                    <div className="mt-1 font-sans text-[8px] sm:text-[10px] uppercase tracking-[0.2em] text-white/70">Çekirdeğinden</div>
+                  </div>
+                  <div className="flex-1 rounded-2xl bg-brand px-3 py-3 text-center shadow-[0_15px_40px_rgba(34,66,81,0.35)] border border-white/10">
+                    <div className="text-white font-light text-[13px] sm:text-[16px]">Ustalık</div>
+                    <div className="mt-1 font-sans text-[8px] sm:text-[10px] uppercase tracking-[0.2em] text-white/70">Baristandan</div>
+                  </div>
+                  <div className="flex-1 rounded-2xl bg-brand px-3 py-3 text-center shadow-[0_15px_40px_rgba(34,66,81,0.35)] border border-white/10">
+                    <div className="text-white font-light text-[13px] sm:text-[16px]">Lezzet</div>
+                    <div className="mt-1 font-sans text-[8px] sm:text-[10px] uppercase tracking-[0.2em] text-white/70">Bardağına</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -540,7 +549,7 @@ export default function App() {
           </div>
 
           <div className="mb-12 flex flex-wrap justify-center gap-3">
-            {["Tümü", "Bolu", "Kırklareli", "İstanbul"].map((c) => (
+            {["Tümü", "Bolu","Mersin", "Kırklareli", "İstanbul"].map((c) => (
               <button
                 key={c}
                 onClick={() => setCity(c)}
@@ -606,192 +615,267 @@ export default function App() {
         </div>
       </div>
 
-      {/* COFFEE CORNER */}
-      <section id="corners" className="bg-white">
-        <div className="mx-auto max-w-[1200px] px-5 sm:px-10 py-16 sm:py-24">
-          <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
+{/* COFFEE CORNER */}
+<section id="corners" className="bg-white">
+  <div className="mx-auto max-w-[1200px] px-5 sm:px-10 py-16 sm:py-24">
+    <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
+      {/* LEFT */}
+      <div>
+        <p className="font-sans text-brand tracking-[0.35em] uppercase text-[11px] mb-4">
+          Coffee Corner
+        </p>
 
-            <div>
-              <p className="font-sans text-brand tracking-[0.35em] uppercase text-[11px] mb-4">
-                Coffee Corner
-              </p>
+        <h2
+          className="text-brand font-light leading-[1.08] tracking-[-0.02em] mb-6"
+          style={{ fontSize: "clamp(34px, 4vw, 56px)" }}
+        >
+          Mekanınıza<br />
+          <span className="italic">Coffee Corner</span>
+        </h2>
 
-              <h2
-                className="text-brand font-light leading-[1.08] tracking-[-0.02em] mb-6"
-                style={{ fontSize: "clamp(34px, 4vw, 56px)" }}
+        <div className="h-[2px] w-14 bg-brand mb-8" />
+
+        <p className="font-sans text-brand/75 leading-[1.9] text-[15px] mb-6 font-light">
+          Şubelerimizin yanında; ofis, istasyon, otel ve işletmelere özel Coffee
+          Corner kurulumları yapıyoruz. Ekipman, ürün tedariki ve barista
+          standartlarımızla işletmenize profesyonel kahve deneyimi getiriyoruz.
+        </p>
+
+        {/* Gallery */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          {CORNER_GALLERY.map((img, index) => {
+            const isFeatured = index === 0;
+            return (
+              <button
+                key={index}
+                type="button"
+                onClick={() => openLightbox(index)}
+                className={[
+                  "relative overflow-hidden rounded-3xl border border-brand/10 bg-brand/5",
+                  "shadow-[0_10px_40px_rgba(34,66,81,0.08)]",
+                  "group cursor-pointer text-left",
+                  "focus:outline-none focus:ring-2 focus:ring-white/30",
+                  isFeatured ? "col-span-2 row-span-2 sm:col-span-2" : "",
+                ].join(" ")}
               >
-                Mekanınıza<br />
-                <span className="italic">Coffee Corner</span>
-              </h2>
-
-              <div className="h-[2px] w-14 bg-brand mb-8" />
-
-              <p className="font-sans text-brand/75 leading-[1.9] text-[15px] mb-6 font-light">
-                Şubelerimizin yanında; ofis, istasyon, otel ve işletmelere özel Coffee Corner kurulumları yapıyoruz.
-                Ekipman, ürün tedariki ve barista standartlarımızla işletmenize profesyonel kahve deneyimi getiriyoruz.
-              </p>
-
-              {/* Gallery */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                {CORNER_GALLERY.map((img, index) => {
-                  const isFeatured = index === 0;
-                  return (
-                    <button
-                      key={index}
-                      type="button"
-                      onClick={() => openLightbox(index)}
-                      className={[
-                        "relative overflow-hidden rounded-3xl border border-brand/10 bg-brand/5",
-                        "shadow-[0_10px_40px_rgba(34,66,81,0.08)]",
-                        "group cursor-pointer text-left",
-                        "focus:outline-none focus:ring-2 focus:ring-white/30",
-                        isFeatured ? "col-span-2 row-span-2 sm:col-span-2" : "",
-                      ].join(" ")}
-                    >
-                      <img
-                        src={img}
-                        alt={`Coffee Corner ${index + 1}`}
-                        loading="lazy"
-                        className={[
-                          "w-full object-cover transition duration-500 group-hover:scale-110",
-                          isFeatured ? "h-[320px] sm:h-[360px]" : "h-[150px] sm:h-[170px]",
-                        ].join(" ")}
-                      />
-                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-black/35 via-transparent to-white/10 opacity-0 group-hover:opacity-100 transition" />
-                      <div className="absolute left-4 bottom-4 opacity-0 group-hover:opacity-100 transition">
-                        <div className="rounded-full bg-white/15 border border-white/20 px-3 py-1 text-[10px] uppercase tracking-[0.22em] text-white/85 font-sans backdrop-blur-sm">
-                          Büyütmek için tıkla
-                        </div>
-                      </div>
-                    </button>
-                  );
-                })}
-              </div>
-
-              <div className="mt-8 flex flex-wrap items-center gap-3">
-                <button
-                  onClick={() => scrollTo("contact")}
-                  className="inline-flex items-center justify-center rounded-full bg-brand text-white px-7 py-3
-                       font-sans text-[12px] uppercase tracking-[0.2em] font-semibold
-                       hover:shadow-lg hover:-translate-y-0.5 transition"
-                >
-                  Corner mı Kurmak İstiyorsunuz?
-                </button>
-
-                <a
-                  href={`https://wa.me/${WHATSAPP_NUMBER}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-full bg-brand text-white px-7 py-3
-                       font-sans text-[12px] uppercase tracking-[0.2em] font-semibold
-                       hover:shadow-lg hover:-translate-y-0.5 transition"
-                >
-                  WhatsApp'tan Yaz
-                </a>
-              </div>
-            </div>
-
-            {/* Right: Locations */}
-            <div>
-              <div className="mb-8">
-                <h3 className="text-brand text-[20px] sm:text-[22px] font-semibold tracking-[0.01em]">
-                  Coffee Corner Lokasyonları
-                </h3>
-                <p className="mt-2 font-sans text-[13px] leading-[1.8] text-brand/60">
-                  Şu an {COFFEE_CORNERS.length} farklı noktada hizmet veriyoruz.
-                </p>
-              </div>
-
-              <div className="grid gap-5 sm:grid-cols-2">
-                {COFFEE_CORNERS.map((c) => (
-                  <div
-                    key={c.name}
-                    className="group relative overflow-hidden rounded-3xl border border-brand/10 bg-white p-6
-                         shadow-[0_10px_40px_rgba(34,66,81,0.08)]
-                         transition hover:-translate-y-1 hover:shadow-[0_18px_60px_rgba(34,66,81,0.16)]"
-                  >
-                    <div className="mb-4 flex items-center justify-between gap-3">
-                      <span className="inline-flex items-center rounded-full bg-brand/5 px-4 py-2">
-                        <span className="font-sans text-[10px] uppercase tracking-[0.22em] text-brand/70">
-                          {c.city}
-                        </span>
-                      </span>
-                      <a
-                        href={c.mapUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-sans text-[10px] uppercase tracking-[0.22em] text-brand/60 hover:text-brand transition"
-                      >
-                        Harita →
-                      </a>
-                    </div>
-                    <div className="text-brand text-[16px] font-semibold leading-snug">{c.name}</div>
-                    <div className="mt-3 font-sans text-[13px] leading-[1.8] text-brand/65">{c.address}</div>
-                    <div className="pointer-events-none absolute -top-24 left-1/2 h-44 w-44 -translate-x-1/2 rounded-full bg-brand/10 blur-3xl opacity-0 transition group-hover:opacity-100" />
+                <img
+                  src={img}
+                  alt={`Coffee Corner ${index + 1}`}
+                  loading="lazy"
+                  className={[
+                    "w-full object-cover transition duration-500 group-hover:scale-110",
+                    isFeatured ? "h-[320px] sm:h-[360px]" : "h-[150px] sm:h-[170px]",
+                  ].join(" ")}
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-black/35 via-transparent to-white/10 opacity-0 group-hover:opacity-100 transition" />
+                <div className="absolute left-4 bottom-4 opacity-0 group-hover:opacity-100 transition">
+                  <div className="rounded-full bg-white/15 border border-white/20 px-3 py-1 text-[10px] uppercase tracking-[0.22em] text-white/85 font-sans backdrop-blur-sm">
+                    Büyütmek için tıkla
                   </div>
-                ))}
-              </div>
-            </div>
-
-          </div>
+                </div>
+              </button>
+            );
+          })}
         </div>
 
-        {/* ✅ LIGHTBOX - App() içinde olduğu için lightboxOpen, activeImg çalışır */}
-        {lightboxOpen && (
-          <div
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm transition-opacity"
-            onClick={closeLightbox}
+        <div className="mt-8 flex flex-wrap items-center gap-3">
+          <button
+            onClick={() => scrollTo("contact")}
+            className="inline-flex items-center justify-center rounded-full bg-brand text-white px-7 py-3
+                 font-sans text-[12px] uppercase tracking-[0.2em] font-semibold
+                 hover:shadow-lg hover:-translate-y-0.5 transition"
           >
-            {/* Kapatma */}
-            <button
-              className="absolute top-6 right-6 z-50 p-2 text-white/60 hover:text-white transition-colors"
-              onClick={closeLightbox}
-              aria-label="Kapat"
-            >
-              <svg className="w-8 h-8 sm:w-10 sm:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
+            Corner mı Kurmak İstiyorsunuz?
+          </button>
 
-            {/* Önceki */}
-            <button
-              className="absolute left-2 sm:left-8 z-50 p-3 text-white/60 hover:text-white transition-colors"
-              onClick={(e) => { e.stopPropagation(); prevImg(); }}
-              aria-label="Önceki Görsel"
-            >
-              <svg className="w-10 h-10 sm:w-12 sm:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
+          <a
+            href={`https://www.instagram.com/coffeeexpresstr/}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-full bg-brand text-white px-7 py-3
+                 font-sans text-[12px] uppercase tracking-[0.2em] font-semibold
+                 hover:shadow-lg hover:-translate-y-0.5 transition"
+          >
+            Bize Ulaşın
+          </a>
+        </div>
+      </div>
 
-            {/* Görsel */}
+      {/* RIGHT: Locations */}
+      <div>
+        <div className="mb-8">
+          <h3 className="text-brand text-[20px] sm:text-[22px] font-semibold tracking-[0.01em]">
+            Coffee Corner Lokasyonları
+          </h3>
+          <p className="mt-2 font-sans text-[13px] leading-[1.8] text-brand/60">
+            Şu an {COFFEE_CORNERS.length} farklı noktada hizmet veriyoruz.
+          </p>
+        </div>
+
+        <div className="grid gap-5 sm:grid-cols-2">
+          {COFFEE_CORNERS.map((c) => (
             <div
-              className="relative max-w-5xl w-full max-h-[90vh] px-12 sm:px-24 flex flex-col items-center justify-center"
-              onClick={(e) => e.stopPropagation()}
+              key={c.name}
+              className="group relative overflow-hidden rounded-3xl border border-brand/10 bg-white p-6
+                     shadow-[0_10px_40px_rgba(34,66,81,0.08)]
+                     transition hover:-translate-y-1 hover:shadow-[0_18px_60px_rgba(34,66,81,0.16)]"
             >
-              <img
-                src={CORNER_GALLERY[activeImg]}
-                alt={`Coffee Corner ${activeImg + 1}`}
-                className="max-w-full max-h-[80vh] object-contain rounded-xl shadow-2xl select-none"
-              />
-              <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 text-white/50 text-[12px] font-sans tracking-[0.2em]">
-                {activeImg + 1} / {CORNER_GALLERY.length}
-              </div>
-            </div>
+              {/* TOP: City + Name */}
+              <div className="flex items-start justify-between gap-3">
+                <div className="min-w-0">
+                  <div className="flex flex-wrap items-center gap-3">
+                    {/* City pill (primary) */}
+                    <span className="relative inline-flex items-center rounded-full bg-brand px-4 py-2 border border-white/10 shadow-[0_10px_30px_rgba(34,66,81,0.25)] overflow-hidden">
+                      <span className="pointer-events-none absolute inset-0 bg-gradient-to-r from-white/0 via-white/15 to-white/0 opacity-60" />
+                      <span className="relative font-sans text-[10px] uppercase tracking-[0.26em] text-white">
+                        {c.city}
+                      </span>
+                    </span>
 
-            {/* Sonraki */}
-            <button
-              className="absolute right-2 sm:right-8 z-50 p-3 text-white/60 hover:text-white transition-colors"
-              onClick={(e) => { e.stopPropagation(); nextImg(); }}
-              aria-label="Sonraki Görsel"
-            >
-              <svg className="w-10 h-10 sm:w-12 sm:h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          </div>
-        )}
-      </section>
+ 
+                  </div>
+
+                  <div className="mt-4 text-brand text-[16px] sm:text-[17px] font-semibold leading-snug truncate">
+                    {c.name}
+                  </div>
+                </div>
+
+              </div>
+
+              {/* Address */}
+              <div className="mt-4 flex items-start gap-2">
+                <span className="mt-[2px] text-brand/40">📌</span>
+                <div className="font-sans text-[13px] leading-[1.8] text-brand/65">
+                  {c.address}
+                </div>
+              </div>
+
+              {/* Map centered at bottom */}
+<div className="mt-6 flex justify-center">
+  <a
+    href={c.mapUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      inline-flex items-center justify-center gap-2
+      rounded-full
+      border border-brand/20
+      px-5 py-2.5
+      font-sans text-[10px] uppercase tracking-[0.22em] font-semibold
+      text-brand
+      bg-transparent
+      transition-all duration-300
+      hover:bg-brand hover:text-white hover:border-brand
+      hover:-translate-y-0.5
+    "
+  >
+    <span className="text-[12px] leading-none">📍</span>
+    Haritada Aç
+    <span className="transition-transform duration-300 group-hover:translate-x-0.5">→</span>
+  </a>
+</div>
+
+              {/* glow */}
+              <div className="pointer-events-none absolute -top-24 left-1/2 h-44 w-44 -translate-x-1/2 rounded-full bg-brand/10 blur-3xl opacity-0 transition group-hover:opacity-100" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* ✅ LIGHTBOX */}
+  {lightboxOpen && (
+    <div
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm transition-opacity"
+      onClick={closeLightbox}
+    >
+      {/* Close */}
+      <button
+        className="absolute top-6 right-6 z-50 p-2 text-white/60 hover:text-white transition-colors"
+        onClick={closeLightbox}
+        aria-label="Kapat"
+      >
+        <svg
+          className="w-8 h-8 sm:w-10 sm:h-10"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+
+      {/* Prev */}
+      <button
+        className="absolute left-2 sm:left-8 z-50 p-3 text-white/60 hover:text-white transition-colors"
+        onClick={(e) => {
+          e.stopPropagation();
+          prevImg();
+        }}
+        aria-label="Önceki Görsel"
+      >
+        <svg
+          className="w-10 h-10 sm:w-12 sm:h-12"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+      </button>
+
+      {/* Image */}
+      <div
+        className="relative max-w-5xl w-full max-h-[90vh] px-12 sm:px-24 flex flex-col items-center justify-center"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <img
+          src={CORNER_GALLERY[activeImg]}
+          alt={`Coffee Corner ${activeImg + 1}`}
+          className="max-w-full max-h-[80vh] object-contain rounded-xl shadow-2xl select-none"
+        />
+        <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 text-white/50 text-[12px] font-sans tracking-[0.2em]">
+          {activeImg + 1} / {CORNER_GALLERY.length}
+        </div>
+      </div>
+
+      {/* Next */}
+      <button
+        className="absolute right-2 sm:right-8 z-50 p-3 text-white/60 hover:text-white transition-colors"
+        onClick={(e) => {
+          e.stopPropagation();
+          nextImg();
+        }}
+        aria-label="Sonraki Görsel"
+      >
+        <svg
+          className="w-10 h-10 sm:w-12 sm:h-12"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M9 5l7 7-7 7"
+          />
+        </svg>
+      </button>
+    </div>
+  )}
+</section>
 
       {/* CONTACT */}
       <section id="contact" className="bg-brand text-white relative overflow-hidden">
@@ -824,12 +908,12 @@ export default function App() {
                 <div className="flex items-center gap-3">
                   <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white/10 border border-white/10">💬</span>
                   <a
-                    href={`https://wa.me/${WHATSAPP_NUMBER}`}
+                    href={`https://www.instagram.com/coffeeexpresstr/`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="underline decoration-white/30 underline-offset-4 hover:text-[#25D366] hover:decoration-[#25D366] transition"
                   >
-                    WhatsApp ile Yaz
+                    Bize Ulaşın
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
@@ -949,7 +1033,7 @@ export default function App() {
                 Sosyal Medya
               </div>
               <div className="flex gap-6 justify-center">
-                {["Instagram", "LinkedIn"].map((sm) => (
+                {["Instagram"].map((sm) => (
                   <a
                     key={sm}
                     href="#"
@@ -970,7 +1054,7 @@ export default function App() {
 
       {/* WhatsApp Float */}
       <a
-        href={`https://wa.me/${WHATSAPP_NUMBER}`}
+        href={`https://www.instagram.com/coffeeexpresstr/`}
         target="_blank"
         rel="noopener noreferrer"
         title="WhatsApp ile Yaz"
