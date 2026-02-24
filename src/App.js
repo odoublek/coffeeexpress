@@ -124,18 +124,17 @@ const BRANCHES = [
 ];
 
 const COFFEE_CORNERS = [
-  { name: "Sabahattinin yeri", city: "Bolu", address: "Kaynaşlı", mapUrl: "https://maps.app.goo.gl/c6F5o7Lf9P2V2Mo17" },
-  { name: "Metro Dinlenme Tesisi", city: "İstanbul", address: "Dudullu", mapUrl: "https://maps.app.goo.gl/DB4yQGY39AetYeD18" },
-  { name: "Metro Holding", city: "İstanbul", address: "Beykoz", mapUrl: "https://maps.app.goo.gl/pRzd9A17pHKg4KNN8" },
-  { name: "Metro Dinlenme Tesisi", city: "İstanbul", address: "Samandıra", mapUrl: "https://maps.app.goo.gl/VEmbcK9Rp8PK5QJQA" },
-  { name: "Ulviye Gıda", city: "Kocaeli", address: "İzmit", mapUrl: "https://maps.app.goo.gl/ndh1XYPnzV33VWQq5" },
-  { name: "Efe Park Dinlenme Tesisi", city: "Balıkesir", address: "Susurluk", mapUrl: "https://maps.app.goo.gl/hGahMWnFMV8BiHpR7" },
-  { name: "İstanbul Shell", city: "Tekirdağ", address: "Çerkezköy", mapUrl: "https://maps.app.goo.gl/hA4wsDCsPZgESUgP9" },
-  { name: "Edirne Yönü Shell", city: "Tekirdağ", address: "Çerkezköy", mapUrl: "https://maps.app.goo.gl/iwNwRSbCjEkhMGCp6" },
-  { name: "İstanbul Yönü Metropark Dinlenme Tesisleri", city: "Kırklareli", address: "Babaeski", mapUrl: "https://maps.app.goo.gl/Nfz6VwQfUR2m6b8b8" },
-  { name: "Edirne Yönü Metropark Dinlenme Tesisleri", city: "Kırklareli", address: "Babaeski", mapUrl: "https://maps.app.goo.gl/YrPdXaZtKHkUSbLZ6" },
+  { id: "bolu-kaynasli-sabahattinin-yeri", name: "Sabahattinin yeri", city: "Bolu", address: "Kaynaşlı", mapUrl: "https://maps.app.goo.gl/c6F5o7Lf9P2V2Mo17" },
+  { id: "istanbul-dudullu-metro-dinlenme", name: "Metro Dinlenme Tesisi", city: "İstanbul", address: "Dudullu", mapUrl: "https://maps.app.goo.gl/DB4yQGY39AetYeD18" },
+  { id: "istanbul-beykoz-metro-holding", name: "Metro Holding", city: "İstanbul", address: "Beykoz", mapUrl: "https://maps.app.goo.gl/pRzd9A17pHKg4KNN8" },
+  { id: "istanbul-samandira-metro-dinlenme", name: "Metro Dinlenme Tesisi", city: "İstanbul", address: "Samandıra", mapUrl: "https://maps.app.goo.gl/VEmbcK9Rp8PK5QJQA" },
+  { id: "kocaeli-izmit-ulviye-gida", name: "Ulviye Gıda", city: "Kocaeli", address: "İzmit", mapUrl: "https://maps.app.goo.gl/ndh1XYPnzV33VWQq5" },
+  { id: "balikesir-susurluk-efe-park", name: "Efe Park Dinlenme Tesisi", city: "Balıkesir", address: "Susurluk", mapUrl: "https://maps.app.goo.gl/hGahMWnFMV8BiHpR7" },
+  { id: "tekirdag-cerkezkoy-istanbul-shell", name: "İstanbul Shell", city: "Tekirdağ", address: "Çerkezköy", mapUrl: "https://maps.app.goo.gl/hA4wsDCsPZgESUgP9" },
+  { id: "tekirdag-cerkezkoy-edirne-yonu-shell", name: "Edirne Yönü Shell", city: "Tekirdağ", address: "Çerkezköy", mapUrl: "https://maps.app.goo.gl/iwNwRSbCjEkhMGCp6" },
+  { id: "kirklareli-babaeski-istanbul-yonu-metropark", name: "İstanbul Yönü Metropark Dinlenme Tesisleri", city: "Kırklareli", address: "Babaeski", mapUrl: "https://maps.app.goo.gl/Nfz6VwQfUR2m6b8b8" },
+  { id: "kirklareli-babaeski-edirne-yonu-metropark", name: "Edirne Yönü Metropark Dinlenme Tesisleri", city: "Kırklareli", address: "Babaeski", mapUrl: "https://maps.app.goo.gl/YrPdXaZtKHkUSbLZ6" },
 ];
-
 const WHATSAPP_NUMBER = "905001234567";
 
 export default function App() {
@@ -571,9 +570,9 @@ Coffee Express, bu anlara eşlik eden en kaliteli kahve deneyimini sunmak için 
               >
                 <div className="pointer-events-none absolute -top-24 left-1/2 h-48 w-48 -translate-x-1/2 rounded-full bg-brand/10 blur-3xl opacity-0 transition group-hover:opacity-100" />
 
-                <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-brand/5 px-4 py-2">
+                <div className="mb-5 inline-flex items-center justify-center rounded-full gap-2 rounded-full bg-brand px-4 py-2">
                   <span className="text-[14px] leading-none">📍</span>
-                  <span className="font-sans text-[11px] uppercase tracking-[0.22em] text-brand/70">
+                  <span className="font-sans text-[11px] uppercase tracking-[0.22em] text-white">
                     {branch.city}
                   </span>
                 </div>
@@ -1036,7 +1035,7 @@ Coffee Express, bu anlara eşlik eden en kaliteli kahve deneyimini sunmak için 
                 {["Instagram"].map((sm) => (
                   <a
                     key={sm}
-                    href="#"
+                    href="https://www.instagram.com/coffeeexpresstr"
                     className="font-sans text-[11px] uppercase tracking-[0.2em] text-white/60 hover:text-white transition"
                   >
                     {sm}
