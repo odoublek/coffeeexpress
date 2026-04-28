@@ -25,6 +25,8 @@ import cookieImg from "./assets/cookie.png";
 import cheesecakeImg from "./assets/cheesecake.png";
 import logo from "./assets/logo.png";
 import CoffeeCornerPreview from "./components/CoffeeCornerPreview";
+import SubeGalerisi from "./components/SubeGalerisi";
+import SectionDivider from "./components/SectionDivider";
 
 const NAV_LINKS = [
   "Hakkımızda",
@@ -867,6 +869,16 @@ export default function App() {
           </div>
         )}
       </section>
+
+            {/* Section Divider */}
+      <div className="relative py-14">
+        <div className="mx-auto max-w-[800px] px-5 sm:px-10">
+          <div className="h-px w-full bg-brand/15 relative">
+            <div className="absolute left-1/2 -translate-x-1/2 h-px w-32 bg-brand/60" />
+          </div>
+        </div>
+      </div>
+      <SubeGalerisi />
 
       {/* CONTACT */}
       <section id="contact" className="bg-brand text-white relative overflow-hidden">
