@@ -266,7 +266,7 @@ export default function CoffeeCornerPreview({ onClose }) {
                   Fotoğraf Seç
                 </div>
 
-                <p className="font-sans text-white/18 text-[10px]">veya sürükleyip bırakın</p>
+                <p className="font-sans text-white/55 text-[11px]">veya sürükleyip bırakın</p>
               </label>
 
               {/* önizleme ipucu */}

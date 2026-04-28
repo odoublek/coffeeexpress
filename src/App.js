@@ -136,7 +136,7 @@ const COFFEE_CORNERS = [
   { id: "kirklareli-babaeski-istanbul-yonu-metropark", name: "İstanbul Yönü Metropark Dinlenme Tesisleri", city: "Kırklareli", address: "Babaeski", mapUrl: "https://maps.app.goo.gl/Nfz6VwQfUR2m6b8b8" },
   { id: "kirklareli-babaeski-edirne-yonu-metropark", name: "Edirne Yönü Metropark Dinlenme Tesisleri", city: "Kırklareli", address: "Babaeski", mapUrl: "https://maps.app.goo.gl/YrPdXaZtKHkUSbLZ6" },
 ];
-const WHATSAPP_NUMBER = "905001234567";
+const WHATSAPP_NUMBER = "905051889080";
 
 export default function App() {
   const [menuCat, setMenuCat] = useState(0);
@@ -300,14 +300,13 @@ export default function App() {
             {/* LEFT: Text */}
             <div className="max-w-[720px]">
               <p
-                className={`font-sans text-white/70 tracking-[0.35em] uppercase text-[11px] mb-4 transition-all duration-700 ${heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+                className={`section-label text-white/70 mb-4 transition-all duration-700 ${heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
               >
                 Yolun En Lezzetli Molası
               </p>
 
               <h1
-                className={`text-white font-light leading-[1.05] tracking-[-0.02em] transition-all duration-700 ${heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
-                style={{ fontSize: "clamp(44px, 6vw, 86px)" }}
+                className={`text-white font-light leading-[1.05] tracking-[-0.02em] text-[clamp(44px,6vw,86px)] transition-all duration-700 ${heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
               >
                 Her Yudumda <br />
                 <span className="italic text-white">Mükemmellik</span>
@@ -327,7 +326,7 @@ export default function App() {
                 <button className="btn-primary" onClick={() => scrollTo("menu")}>
                   Menüyü Keşfet
                 </button>
-                <button className="btn-primary" onClick={() => scrollTo("branches")}>
+                <button className="btn-outline" onClick={() => scrollTo("branches")}>
                   Şubeleri Bul
                 </button>
               </div>
@@ -340,7 +339,7 @@ export default function App() {
                   ["100K+", "Mutlu Müşteri"],
                 ].map(([num, label]) => (
                   <div key={label}>
-                    <div className="text-white font-light leading-none" style={{ fontSize: "clamp(28px, 3.5vw, 44px)" }}>
+                    <div className="text-white font-light leading-none text-[clamp(28px,3.5vw,44px)]">
                       {num}
                     </div>
                     <div className="mt-2 font-sans text-[11px] uppercase tracking-[0.2em] text-white/55">
@@ -377,13 +376,12 @@ export default function App() {
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
 
             <div>
-              <p className="font-sans text-brand tracking-[0.35em] uppercase text-[11px] mb-4">
+              <p className="section-label text-brand mb-4">
                 Hakkımızda
               </p>
 
               <h2
-                className="text-brand font-light leading-[1.08] tracking-[-0.02em] mb-6"
-                style={{ fontSize: "clamp(34px, 4vw, 56px)" }}
+                className="text-brand font-light leading-[1.08] tracking-[-0.02em] mb-6 text-[clamp(34px,4vw,56px)]"
               >
                 Kahveye Olan <br />
                 <span className="italic">Tutkumuz</span>
@@ -424,15 +422,15 @@ export default function App() {
                 <div className="flex justify-between gap-2">
                   <div className="flex-1 rounded-2xl bg-brand px-3 py-3 text-center shadow-[0_15px_40px_rgba(34,66,81,0.35)] border border-white/10">
                     <div className="text-white font-light text-[13px] sm:text-[16px]">Kalite</div>
-                    <div className="mt-1 font-sans text-[8px] sm:text-[10px] uppercase tracking-[0.2em] text-white/70">Çekirdeğinden</div>
+                    <div className="mt-1 font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-white/70">Çekirdeğinden</div>
                   </div>
                   <div className="flex-1 rounded-2xl bg-brand px-3 py-3 text-center shadow-[0_15px_40px_rgba(34,66,81,0.35)] border border-white/10">
                     <div className="text-white font-light text-[13px] sm:text-[16px]">Ustalık</div>
-                    <div className="mt-1 font-sans text-[8px] sm:text-[10px] uppercase tracking-[0.2em] text-white/70">Baristadan</div>
+                    <div className="mt-1 font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-white/70">Baristadan</div>
                   </div>
                   <div className="flex-1 rounded-2xl bg-brand px-3 py-3 text-center shadow-[0_15px_40px_rgba(34,66,81,0.35)] border border-white/10">
                     <div className="text-white font-light text-[13px] sm:text-[16px]">Lezzet</div>
-                    <div className="mt-1 font-sans text-[8px] sm:text-[10px] uppercase tracking-[0.2em] text-white/70">Bardağına</div>
+                    <div className="mt-1 font-sans text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-white/70">Bardağına</div>
                   </div>
                 </div>
               </div>
@@ -445,12 +443,11 @@ export default function App() {
       <section id="menu" className="bg-brand text-white relative overflow-hidden">
         <div className="mx-auto max-w-[1200px] px-5 sm:px-10 py-16 sm:py-24">
           <div className="text-center mb-10">
-            <p className="font-sans text-white/60 tracking-[0.35em] uppercase text-[11px] mb-4">
+            <p className="section-label text-white/60 mb-4">
               Lezzetlerimiz
             </p>
             <h2
-              className="font-light leading-[1.08] tracking-[-0.02em]"
-              style={{ fontSize: "clamp(34px, 4vw, 56px)" }}
+              className="font-light leading-[1.08] tracking-[-0.02em] text-[clamp(34px,4vw,56px)]"
             >
               Menümüz
             </h2>
@@ -508,7 +505,7 @@ export default function App() {
                 >
                   <div className="m-3 rounded-2xl border border-white/15 bg-black/35 backdrop-blur-md p-4">
                     <div className="flex items-start justify-between gap-3">
-                      <h3 className="text-white font-medium text-[14px] tracking-[0.01em]">
+                      <h3 className="text-white font-semibold text-[14px] tracking-[0.01em]">
                         {item.name}
                       </h3>
                       <span className="font-sans text-[9px] uppercase tracking-[0.25em] text-white/70">
@@ -538,8 +535,7 @@ export default function App() {
         <div className="mx-auto max-w-[1200px] px-5 sm:px-10 py-16 sm:py-24">
           <div className="text-center mb-10 sm:mb-14">
             <h2
-              className="text-brand font-light leading-[1.08] tracking-[-0.02em]"
-              style={{ fontSize: "clamp(34px, 4vw, 56px)" }}
+              className="text-brand font-light leading-[1.08] tracking-[-0.02em] text-[clamp(34px,4vw,56px)]"
             >
               Şubelerimiz
             </h2>
@@ -622,13 +618,12 @@ export default function App() {
           <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-20">
             {/* LEFT */}
             <div>
-              <p className="font-sans text-brand tracking-[0.35em] uppercase text-[11px] mb-4">
+              <p className="section-label text-brand mb-4">
                 Coffee Corner
               </p>
 
               <h2
-                className="text-brand font-light leading-[1.08] tracking-[-0.02em] mb-6"
-                style={{ fontSize: "clamp(34px, 4vw, 56px)" }}
+                className="text-brand font-light leading-[1.08] tracking-[-0.02em] mb-6 text-[clamp(34px,4vw,56px)]"
               >
                 Mekanınıza<br />
                 <span className="italic">Coffee Corner</span>
@@ -687,75 +682,34 @@ export default function App() {
                   boxShadow: "0 16px 48px rgba(34,66,81,0.1)",
                 }}
               >
-                {/* Üst: metin + adımlar */}
+                {/* Üst: editorial başlık + tek paragraf */}
                 <div
-                  className="px-6 py-6 sm:px-7 sm:py-7"
+                  className="px-7 py-10 sm:px-10 sm:py-12"
                   style={{
                     background: "linear-gradient(140deg,#0f2430 0%,#1a3344 100%)",
                   }}
                 >
-                  {/* rozetler */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {["⚡ Hızlı Kurulum", "☕ Profesyonel Ekipman", "🎯 Teknik Destek"].map((tag) => (
-                      <span
-                        key={tag}
-                        className="font-sans text-[10px] uppercase tracking-[0.16em] rounded-full px-3 py-1"
-                        style={{
-                          background: "rgba(196,122,58,0.15)",
-                          color: "#c47a3a",
-                          border: "1px solid rgba(196,122,58,0.28)",
-                        }}
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <p className="font-serif text-white text-[17px] sm:text-[19px] font-light leading-[1.6]">
-                    Kurduğumuz coffee corner'lar müşterilerinize{" "}
-                    <span className="italic" style={{ color: "#e8a84c" }}>
-                      hem hızlı hem kaliteli
-                    </span>{" "}
-                    kahve deneyimi yaşatıyor.
+                  <p className="section-label mb-5" style={{ color: "#c47a3a" }}>
+                    Ücretsiz Önizleme
                   </p>
 
-                  <p className="font-sans text-white/50 text-[13px] mt-2 leading-relaxed">
-                    Düşündüğünüz yerde nasıl duracağını merak mı ediyorsunuz?
-                  </p>
+                  <h3 className="font-serif text-white font-light leading-[1.15] text-[28px] sm:text-[34px] mb-5">
+                    Mekanınıza Nasıl <br />
+                    <span className="italic" style={{ color: "#c47a3a" }}>Yakışır?</span>
+                  </h3>
 
-                  {/* adım önizlemesi */}
-                  <div className="flex flex-wrap items-center gap-2 mt-5">
-                    {[
-                      { icon: "📷", text: "Fotoğraf yükle" },
-                      { icon: "↔",  text: "Yerleştir"      },
-                      { icon: "✓",  text: "Anında gör"     },
-                    ].map((s, i) => (
-                      <div key={i} className="flex items-center gap-1.5">
-                        <span
-                          className="w-6 h-6 rounded-full flex items-center justify-center text-[11px] flex-shrink-0"
-                          style={{
-                            background: "rgba(196,122,58,0.2)",
-                            border: "1px solid rgba(196,122,58,0.35)",
-                          }}
-                        >
-                          {s.icon}
-                        </span>
-                        <span className="font-sans text-[11px] text-white/55">{s.text}</span>
-                        {i < 2 && (
-                          <span className="font-sans text-white/20 text-[11px] ml-0.5">→</span>
-                        )}
-                      </div>
-                    ))}
-                  </div>
+                  <p className="font-sans text-white/65 text-[14px] leading-[1.75] max-w-[380px]">
+                    Kendi fotoğrafınıza yerleştirin, Coffee Corner'ın
+                    mekanınızda nasıl duracağını saniyeler içinde görün.
+                  </p>
                 </div>
 
                 {/* Orta: ana buton */}
                 <button
                   onClick={() => setCornerPreviewOpen(true)}
-                  className="group relative w-full flex items-center justify-between px-6 py-4 sm:px-7 sm:py-5 transition-all duration-300 hover:brightness-110"
+                  className="group relative w-full flex items-center justify-between px-7 py-5 sm:px-10 sm:py-6 transition-all duration-300 hover:brightness-110"
                   style={{ background: "#c47a3a" }}
                 >
-                  {/* parlama */}
                   <span
                     className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                     style={{
@@ -764,40 +718,27 @@ export default function App() {
                     }}
                   />
 
-                  <div className="flex items-center gap-3">
-                    <span
-                      className="w-9 h-9 rounded-full flex items-center justify-center text-[15px] flex-shrink-0"
-                      style={{ background: "rgba(255,255,255,0.18)" }}
-                    >
-                      ✦
-                    </span>
-                    <div className="text-left">
-                      <div className="font-sans text-white font-bold text-[13px] uppercase tracking-[0.2em]">
-                        Mekanında Nasıl Görünür?
-                      </div>
-                      <div className="font-sans text-white/65 text-[11px] mt-0.5">
-                        Kendi fotoğrafınıza yerleştirin — ücretsiz, anında
-                      </div>
-                    </div>
-                  </div>
+                  <span className="font-sans text-white font-semibold text-[13px] uppercase tracking-[0.22em]">
+                    Önizlemeyi Başlat
+                  </span>
 
-                  <span className="text-white/70 text-[20px] transition-transform duration-300 group-hover:translate-x-1.5 flex-shrink-0">
+                  <span className="text-white text-[20px] leading-none transition-transform duration-300 group-hover:translate-x-1.5">
                     →
                   </span>
                 </button>
 
                 {/* Alt: WhatsApp şeridi */}
                 <a
-                  href="https://wa.me/905051889080"
+                  href={`https://wa.me/${WHATSAPP_NUMBER}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-6 py-3.5 font-sans text-[11px] uppercase tracking-[0.2em] font-semibold transition hover:brightness-105"
+                  className="flex items-center justify-center gap-2 px-6 py-3.5 font-sans text-[11px] uppercase tracking-[0.22em] font-semibold transition hover:brightness-105"
                   style={{ background: "#25D366", color: "#fff" }}
                 >
                   <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.438 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.937 3.659 1.432 5.633 1.433h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
                   </svg>
-                  Hemen Teklif Al — Bize Ulaşın
+                  WhatsApp ile İletişime Geç
                 </a>
               </div>
               {/* /CTA KARTI */}
@@ -932,13 +873,12 @@ export default function App() {
         <div className="mx-auto max-w-[1200px] px-5 sm:px-10 py-16 sm:py-24">
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
             <div>
-              <p className="font-sans tracking-[0.35em] uppercase text-[11px] text-white/60 mb-4">
+              <p className="section-label text-white/60 mb-4">
                 Bize Ulaşın
               </p>
 
               <h2
-                className="font-light leading-[1.08] tracking-[-0.02em] mb-6"
-                style={{ fontSize: "clamp(34px, 4vw, 56px)" }}
+                className="font-light leading-[1.08] tracking-[-0.02em] mb-6 text-[clamp(34px,4vw,56px)]"
               >
                 Bir Mesafe Kadar <span className="italic"> Yakınız</span>
               </h2>
@@ -958,7 +898,7 @@ export default function App() {
                 <div className="flex items-center gap-3">
                   <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white/10 border border-white/10">💬</span>
                   <a
-                    href={`https://wa.me/905051889080`}
+                    href={`https://wa.me/${WHATSAPP_NUMBER}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="underline decoration-white/30 underline-offset-4 hover:text-[#25D366] hover:decoration-[#25D366] transition"
@@ -1000,41 +940,57 @@ export default function App() {
                 <input type="hidden" name="_template" value="table" />
 
                 <div className="grid gap-6 sm:grid-cols-2">
+                  <div>
+                    <label htmlFor="ad" className="sr-only">Adınız</label>
+                    <input
+                      id="ad"
+                      name="ad"
+                      required
+                      className="w-full rounded-2xl bg-white/5 border border-white/10 px-5 py-4 text-white placeholder:text-white/40
+                     font-sans text-[14px] outline-none focus:border-white/30 focus:bg-white/10 transition"
+                      placeholder="Adınız"
+                      type="text"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="sr-only">E-posta Adresiniz</label>
+                    <input
+                      id="email"
+                      name="email"
+                      required
+                      className="w-full rounded-2xl bg-white/5 border border-white/10 px-5 py-4 text-white placeholder:text-white/40
+                     font-sans text-[14px] outline-none focus:border-white/30 focus:bg-white/10 transition"
+                      placeholder="E-posta Adresiniz"
+                      type="email"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="konu" className="sr-only">Konunuz</label>
                   <input
-                    name="ad"
+                    id="konu"
+                    name="konu"
                     required
                     className="w-full rounded-2xl bg-white/5 border border-white/10 px-5 py-4 text-white placeholder:text-white/40
                    font-sans text-[14px] outline-none focus:border-white/30 focus:bg-white/10 transition"
-                    placeholder="Adınız"
+                    placeholder="Konunuz"
                     type="text"
-                  />
-                  <input
-                    name="email"
-                    required
-                    className="w-full rounded-2xl bg-white/5 border border-white/10 px-5 py-4 text-white placeholder:text-white/40
-                   font-sans text-[14px] outline-none focus:border-white/30 focus:bg-white/10 transition"
-                    placeholder="E-posta Adresiniz"
-                    type="email"
                   />
                 </div>
 
-                <input
-                  name="konu"
-                  required
-                  className="w-full rounded-2xl bg-white/5 border border-white/10 px-5 py-4 text-white placeholder:text-white/40
-                 font-sans text-[14px] outline-none focus:border-white/30 focus:bg-white/10 transition"
-                  placeholder="Konunuz"
-                  type="text"
-                />
-
-                <textarea
-                  name="mesaj"
-                  required
-                  className="w-full rounded-2xl bg-white/5 border border-white/10 px-5 py-4 text-white placeholder:text-white/40
-                 font-sans text-[14px] outline-none focus:border-white/30 focus:bg-white/10 transition"
-                  placeholder="Mesajınız"
-                  rows={5}
-                />
+                <div>
+                  <label htmlFor="mesaj" className="sr-only">Mesajınız</label>
+                  <textarea
+                    id="mesaj"
+                    name="mesaj"
+                    required
+                    className="w-full rounded-2xl bg-white/5 border border-white/10 px-5 py-4 text-white placeholder:text-white/40
+                   font-sans text-[14px] outline-none focus:border-white/30 focus:bg-white/10 transition"
+                    placeholder="Mesajınız"
+                    rows={5}
+                  />
+                </div>
 
                 <button
                   type="submit"
@@ -1104,7 +1060,7 @@ export default function App() {
 
       {/* WhatsApp Float */}
       <a
-        href="https://wa.me/905051889080"
+        href={`https://wa.me/${WHATSAPP_NUMBER}`}
         target="_blank"
         rel="noopener noreferrer"
         title="WhatsApp ile Yaz"
